@@ -247,3 +247,6 @@ main form fieldset{
     color: #C7C7A6;
 }
 
+.cardsboot row{
+    align-items: center;
+}
