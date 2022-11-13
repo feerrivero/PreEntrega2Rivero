@@ -38,27 +38,24 @@
                 </div> <!-- Imagen deberia dirigir a la pagina donde se detallen los productos seleccionados-->
             </div>
         </header>
-        <section class="envios">
+        <section class="envios" id="envios">
             <div>
                 <h1>¡Envios sin cargo los primeros 10 kilometros al rededor de nuestro punto de retiro!</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13147.30316498124!2d-58.74880979999999!3d-34.532641399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97f68b8ef8f9%3A0xe6d50259c1ce476b!2sMunicipalidad%20Jos%C3%A9%20C.%20Paz!5e0!3m2!1ses!2sar!4v1665970821669!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="container-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13147.30316498124!2d-58.74880979999999!3d-34.532641399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc97f68b8ef8f9%3A0xe6d50259c1ce476b!2sMunicipalidad%20Jos%C3%A9%20C.%20Paz!5e0!3m2!1ses!2sar!4v1665970821669!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <h2>Consulte el costo de envio</h2>
+            <form class="container-fluid">
+                <fieldset>
+                    <legend>Inserte codigo postal</legend>
+                    <div>
+                        <label for="codigoPostalButton">
+                            <input type="number" id="codigoPostalButton" placeholder="Codigo postal">
+                        </label>
+                    </div>
+                    <button type="submit">Consultar</button> <!-- El uso del boton deberia arrojar el precio del envio-->
+                </fieldset>
+            </form>
         </section>
-        <form>
-            <fieldset>
-                <legend>Inserte codigo postal</legend>
-                <div>
-                    <label for="codigoPostalButton">
-                        <input type="number" id="codigoPostalButton" placeholder="Codigo postal">
-                    </label>
-                </div>
-                <button type="submit">Consultar</button> <!-- El uso del boton deberia arrojar el precio del envio-->
-            </fieldset>
-
-
-
-        </form>
         <footer>
             <div class="laEmpresa">
                 <h3>La empresa</h3>

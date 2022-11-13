@@ -83,8 +83,14 @@ header .barra .menu li a{
     color: #25291C;
 }
 
+header .barra .menu li a:hover{
+    background-color:#25291C;
+    color: white;
+}
+
 .productos,.empresa,.envios,.envios,.productosAll{
     border-top: 0.2rem solid black;
+    padding: 1rem
 }
 
 /* Index */
@@ -92,12 +98,14 @@ body main section{
     background-color: #EAFFDA;
 }
 
-.productos .cards div{
+.productos .cards div
+{
     width: 300px;
     height: 380px;
     border: 2px solid black;
     text-align: center;
     padding-bottom: 5px;
+    background-color: #A49966;
 }
 
 .productos .cards div a{
@@ -124,11 +132,13 @@ body main section{
 
 .menuFiltro {
     border: 2px solid black;
-    height: 75px;
-    width: 150px;
-    background-color: #605C4E;
+    height: 7.5rem;
+    width: 100%;
+    background-color: #C7C7A6;
     grid-area: menuFiltro;
     margin-top: 4rem;
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 /* Cards */
@@ -136,6 +146,11 @@ body main section{
     grid-area: cards;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* padding-bottom: 2rem; */
+}
+
+.cards div{
+    margin: 1rem;
 }
 
 /* Grid cuerpo index */
@@ -146,8 +161,13 @@ body main section{
     "parrafoProductos parrafoProductos"
     "menuFiltro cards";
 }
-.parrafoProductos{
+
+.productos .parrafoProductos{
+    background-color: rgb(208,2,27);
+    color: white;
+    border: 0.3rem solid black;
     grid-area: parrafoProductos;
+    text-align: center;
 }
 
 /* Footer */
@@ -225,14 +245,52 @@ footer .contacto p{
 
 /* Formulario */
 form{
+    font-style: italic;
     background-color: #363020;
+    padding: 1rem;
 }
 
-/* Pestaña nosotros */
-main .empresa div{
+form input{
     margin: 0.5rem;
-    padding: 1rem
 }
+
+/* Pestaña .productos */
+.productosAll{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "parrafoProductos parrafoProductos"
+    "menuFiltro cards";
+}
+    
+.productosAll .parrafoProductos{
+    background-color: rgb(208,2,27);
+    color: white;
+    border: 0.3rem solid black;
+    grid-area: parrafoProductos;
+    text-align: center;
+}
+
+.productosAll .cards div
+{
+    width: 300px;
+    height: 380px;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 5px;
+    background-color: #A49966;
+}
+
+.productosAll .cards div a{
+    color: white;
+    background-color: #25291C;
+    padding: 5px;
+}
+
+.productosAll .cards div h2{
+    font-size: 1.2rem;
+}
+
 
 /* Pestaña contacto, formulario */
 main form fieldset{

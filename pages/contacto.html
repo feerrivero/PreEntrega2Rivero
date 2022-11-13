@@ -40,40 +40,41 @@
         </header>
         <section class="envios">
             <h1>Completa el formulario con tus datos y te contactaremos a la brevedad</h1>
+            <form class="container-fluid">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    
+                    <p>Sexo</p>
+    
+                    <label for="hombre">
+                        <input type="radio" id="hombre" name="sexo" class="container-fluid">Hombre
+                    </label>
+    
+                    <label for="mujer">
+                        <input type="radio" id="mujer" name="sexo" class="container-fluid">Mujer
+                    </label>
+    
+                    <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" required placeholder="Nombre" id="nombre" class="container-fluid">
+                    </div>
+    
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" required placeholder="Apellido" id="apellido" class="container-fluid">
+                    </div>
+    
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" required placeholder="E-mail" id="email" class="container-fluid">
+                    </div>
+    
+                    <button type="submit">Enviar</button>
+    
+                </fieldset>
+            </form>
         </section>
-        <form>
-            <fieldset>
-                <legend>Información personal</legend>
-                
-                <p>Sexo</p>
-
-                <label for="hombre">
-                    <input type="radio" id="hombre" name="sexo">Hombre
-                </label>
-
-                <label for="mujer">
-                    <input type="radio" id="mujer" name="sexo">Mujer
-                </label>
-
-                <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" required placeholder="Nombre" id="nombre">
-                </div>
-
-                <div>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" required placeholder="Apellido" id="apellido">
-                </div>
-
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" required placeholder="E-mail" id="email">
-                </div>
-
-                <button type="submit">Enviar</button>
-
-            </fieldset>
-        </form>
+        
         <footer>
             <div class="laEmpresa">
                 <h3>La empresa</h3>
