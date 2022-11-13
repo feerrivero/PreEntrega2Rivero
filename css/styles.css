@@ -83,7 +83,7 @@ header .barra .menu li a{
     color: #25291C;
 }
 
-.productos,.empresa,.envios,.envios{
+.productos,.empresa,.envios,.envios,.productosAll{
     border-top: 0.2rem solid black;
 }
 
@@ -112,19 +112,9 @@ body main section{
 
 
 /* Menu filtro */
-.menuFiltro{
-text-align: center;
-text-align: left;
-}
 
 .menuFiltro ul li{
     list-style: none;
-
-}
-
-.menuFiltro .categorias ul li{
-    list-style: none;
-    text-align: center;
 }
 
 .menuFiltro .categorias ul li a{
@@ -137,6 +127,27 @@ text-align: left;
     height: 75px;
     width: 150px;
     background-color: #605C4E;
+    grid-area: menuFiltro;
+    margin-top: 4rem;
+}
+
+/* Cards */
+.cards{
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Grid cuerpo index */
+.productos{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "parrafoProductos parrafoProductos"
+    "menuFiltro cards";
+}
+.parrafoProductos{
+    grid-area: parrafoProductos;
 }
 
 /* Footer */
