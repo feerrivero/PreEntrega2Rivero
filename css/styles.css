@@ -18,6 +18,7 @@ a{
 header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 115px;
     grid-template-areas: "logo barra botones";
     height: 7rem;
 }
@@ -137,20 +138,28 @@ background-color: rgb(208,2,27);
 .menuFiltro {
     border: 2px solid black;
     height: 7.5rem;
-    width: 100%;
+    width: 220px; 
     background-color: #A49966;
     grid-area: menuFiltro;
-    margin-top: 4rem;
+    margin: 4rem 1rem;
     font-size: 1.5rem;
     font-style: italic;
 }
 
 /* Cards */
 .cards{
+    width: 100%;
+    margin:0;
     grid-area: cards;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* padding-bottom: 2rem; */
+    justify-items: center;
+}
+
+@media screen and (max-width:1275px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .cards div{
@@ -172,6 +181,7 @@ background-color: rgb(208,2,27);
     border: 0.3rem solid black;
     grid-area: parrafoProductos;
     text-align: center;
+    width: 100%;
 }
 
 /* Footer */
