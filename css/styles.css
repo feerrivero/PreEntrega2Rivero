@@ -160,6 +160,48 @@ background-color: rgb(208,2,27);
     .cards{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    header .barra ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header, .barra, .botones_header{
+        height: 280px;
+        flex-direction: column;
+    }
+
+    header .barra{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 280px;
+        grid-template-areas: "logo barra botones";
+    }
+
+    #logo_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+
+    header div .iniciarSesion,
+    header div .carrito {
+        height: 45px;
+        width: 45px;
+        align-content: center;
+    }
+    .botones_header{
+        align-items: flex-start;
+
+    }
+
+
 }
 
 .cards div{
@@ -173,6 +215,35 @@ background-color: rgb(208,2,27);
     grid-template-areas: 
     "parrafoProductos parrafoProductos"
     "menuFiltro cards";
+}
+
+@media screen and (max-width:1160px) {
+    .productos{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "parrafoProductos parrafoProductos"
+        "cards cards"
+        "menuFiltro menuFiltro";
+    }
+    .menuFiltro {
+        grid-area: menuFiltro;
+        margin: 4rem 1rem;
+        font-size: 3rem;
+        display: flex;
+        width: max-content;
+    }
+    .menuFiltro .tipoDePrenda{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 65rem;
+
+    }
+    .menuFiltro .tipoDePrenda li{
+        padding: 2rem;
+        margin: auto;
+    }
 }
 
 .productos .parrafoProductos{
