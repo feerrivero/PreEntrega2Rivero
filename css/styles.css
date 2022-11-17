@@ -99,14 +99,14 @@ body main section{
     background-color: #EAFFDA;
 }
 
-.productos .cards div
-{
+.productos .cards div{
     width: 300px;
-    height: 380px;
+    height: 400px;
     border: 2px solid black;
     text-align: center;
     padding-bottom: 5px;
     background-color: #A49966;
+    margin: 0.7rem;
 }
 
 .productos .cards div a{
@@ -123,14 +123,41 @@ background-color: rgb(208,2,27);
     font-size: 1.2rem;
 }
 
+.productos .cards div h3{
+    font-size: 1.5rem;
+}
+
+.productos .parrafoProductos{
+    background-color: rgb(208,2,27);
+    color: white;
+    border: 0.3rem solid black;
+    grid-area: parrafoProductos;
+    text-align: center;
+    width: 100%;
+    animation-name: ofertas;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+/* Animacion  */
+@keyframes ofertas{
+    0%{color: white;
+    background-color:rgb(208,2,27);}
+    50%{color: rgb(208,2,27);
+    background-color: white;}
+    100%{color: white;
+    background-color:rgb(208,2,27);}
+}
 
 /* Menu filtro */
 
-.menuFiltro ul li{
+.menuFiltro div ul li{
     list-style: none;
 }
 
-.menuFiltro .categorias ul li a{
+.menuFiltro div .categorias ul li a{
     color: white;
     font-size: 1rem;
 }
@@ -154,6 +181,12 @@ background-color: rgb(208,2,27);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+}
+
+.cards div img{
+    height: 295px;
+    width: 295px;
+    align-content: center;
 }
 
 @media screen and (max-width:1275px) {
@@ -198,15 +231,13 @@ background-color: rgb(208,2,27);
     }
     .botones_header{
         align-items: flex-start;
-
     }
 
-
+    #logo_header a img{
+        height: 5.5rem;
+    }
 }
 
-.cards div{
-    margin: 1rem;
-}
 
 /* Grid cuerpo index */
 .productos{
@@ -217,6 +248,7 @@ background-color: rgb(208,2,27);
     "menuFiltro cards";
 }
 
+/* Media queris */
 @media screen and (max-width:1160px) {
     .productos{
         display:grid;
@@ -228,31 +260,46 @@ background-color: rgb(208,2,27);
     }
     .menuFiltro {
         grid-area: menuFiltro;
-        margin: 4rem 1rem;
-        font-size: 3rem;
-        display: flex;
-        width: max-content;
+        /* margin: 4rem 1rem; */
+        margin: auto;
+        font-size: 2rem;
+        width: 650px;
+        align-items: center;
     }
-    .menuFiltro .tipoDePrenda{
+    .menuFiltro div .tipoDePrenda{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 65rem;
 
     }
-    .menuFiltro .tipoDePrenda li{
+    .menuFiltro div .tipoDePrenda li{
         padding: 2rem;
         margin: auto;
     }
 }
 
-.productos .parrafoProductos{
-    background-color: rgb(208,2,27);
-    color: white;
-    border: 0.3rem solid black;
-    grid-area: parrafoProductos;
-    text-align: center;
-    width: 100%;
+@media screen and (max-width:685px) {
+    .productos, .cards{
+        display:flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .menuFiltro {
+        display: none;
+    }
+    .menuFiltro div .tipoDePrenda{
+        display: none;
+    }
+.redesSociales div{
+    display: flex;
+    flex-direction: column;
+}
+
+header .barra .menu li{ 
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
 }
 
 /* Footer */
@@ -276,6 +323,10 @@ footer .laEmpresa{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+footer .laEmpresa a{
+    text-align: center;
 }
 
 /* Footer contacto */
@@ -324,8 +375,12 @@ footer .imagenfooter p{
 }
 
 /* Footer horario de contacto */
-footer .contacto p{
+footer .contacto p, footer .contacto h3{
     margin: 0px;
+    text-align: center;
+}
+footer div h3{
+    text-align: center;
 }
 
 /* Formulario */
@@ -376,6 +431,7 @@ form input{
     text-align: center;
     padding-bottom: 5px;
     background-color: #A49966;
+    margin: 1rem;
 }
 
 .productosAll .cards div a{
