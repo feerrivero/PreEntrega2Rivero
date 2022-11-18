@@ -89,16 +89,17 @@ header .barra .menu li a:hover{
     color: white;
 }
 
-.productos,.empresa,.envios,.envios,.productosAll{
+.productos,.envios,.envios,.productosAll{
     border-top: 0.2rem solid black;
     padding: 1rem
 }
 
 /* Index */
 body main section{
-    background-color: #EAFFDA;
+    background-color: #F4FDD9;
 }
 
+/* Productos ofertas */
 .productos .cards div{
     width: 300px;
     height: 400px;
@@ -141,7 +142,7 @@ background-color: rgb(208,2,27);
     animation-delay: 2s;
 }
 
-/* Animacion  */
+/* Animacion texto oferta */
 @keyframes ofertas{
     0%{color: white;
     background-color:rgb(208,2,27);}
@@ -173,7 +174,7 @@ background-color: rgb(208,2,27);
     font-style: italic;
 }
 
-/* Cards */
+/* Cards de productos en ofertas del index*/
 .cards{
     width: 100%;
     margin:0;
@@ -189,6 +190,7 @@ background-color: rgb(208,2,27);
     align-content: center;
 }
 
+/* Media queris para pantallas menores de 1275px */
 @media screen and (max-width:1275px) {
     .cards{
         grid-template-columns: repeat(2, 1fr);
@@ -248,9 +250,9 @@ background-color: rgb(208,2,27);
     "menuFiltro cards";
 }
 
-/* Media queris */
+/* Media queris para pantallas menores a 1160px */
 @media screen and (max-width:1160px) {
-    .productos{
+    .productos, .productosAll{
         display:grid;
         grid-template-columns: 50% 50%;
         grid-template-areas: 
@@ -278,6 +280,7 @@ background-color: rgb(208,2,27);
     }
 }
 
+/* Media queris para pantallas menoras a 685px */
 @media screen and (max-width:685px) {
     .productos, .cards{
         display:flex;
@@ -300,6 +303,13 @@ header .barra .menu li{
     font-size: 1.5rem;
     padding: 0.2rem;
 }
+}
+
+@media screen and (max-width:530px){
+    footer div{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 /* Footer */
@@ -395,14 +405,55 @@ form input{
 }
 
 /* Pestaña nosotros */
-.empresa div h2{
+.empresa h2{
     background-color: #363020;
     color: white;
     border: 0.3rem solid black;
-    text-align: start;
 }
 
-/* Pestaña .productos */
+.contenedorNosotros{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.contenedorNosotros img{
+    height: 250px;
+    width: 350px;
+}
+/* carousel */
+
+#carouselExampleIndicators{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#reverse{
+    flex-direction: row-reverse;
+}
+
+.empresa{
+    margin-top: 0.2rem;
+}
+
+.empresa h2{
+margin: 0;
+}
+
+.contenedorNosotros{
+    text-align:justify;
+}
+
+@media screen and (max-width:770px){
+    .contenedorNosotros, #reverse{
+        flex-direction: column;
+    }
+    .contenedorNosotros img{
+        width: 100%;
+    }
+}
+
+/* Pestaña .productos seccion*/
 .productosAll{
     display:grid;
     grid-template-columns: 20% 80%;
@@ -449,19 +500,29 @@ form input{
 }
 
 /* Pestaña envios */
+
+.envios div h1{
+    background-color: #363020;
+    color: white;
+}
+
 .envios div h1,
 h2 {
     font-style: italic;
     text-align: center;
 }
 
-.envios h1{
-    font-style: italic;
-    text-align: center;
+.envios h2{
+    color:#363020;
 }
-
 
 /* Pestaña contacto, formulario */
 main form fieldset{
     color: #C7C7A6;
+}
+
+.envios h1{
+    color:#363020;
+    font-style: italic;
+    text-align: center;
 }
