@@ -185,14 +185,20 @@ body main section {
     display: flex;
     flex-direction: column;
   }
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
   header .barra ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  header div .iniciarSesion,
+  header div .carrito {
+    height: 45px;
+    width: 45px;
+    align-content: center;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
   header, .barra, .botones_header {
     height: 280px;
@@ -204,17 +210,11 @@ body main section {
     justify-content: end;
     align-items: center;
   }
-  header div .iniciarSesion,
-  header div .carrito {
-    height: 45px;
-    width: 45px;
-    align-content: center;
+  #logo_header a img {
+    height: 5.5rem;
   }
   .botones_header {
     align-items: flex-start;
-  }
-  #logo_header a img {
-    height: 5.5rem;
   }
 }
 /* Grid cuerpo index */
@@ -233,7 +233,6 @@ body main section {
   }
   .menuFiltro {
     grid-area: menuFiltro;
-    /* margin: 4rem 1rem; */
     margin: auto;
     font-size: 2rem;
     width: 650px;
@@ -288,8 +287,6 @@ footer {
   justify-items: center;
   background-color: #C7C7A6;
 }
-
-/* Footer la empresa */
 footer .laEmpresa {
   grid-area: laEmpresa;
   display: flex;
@@ -297,12 +294,9 @@ footer .laEmpresa {
   justify-content: flex-start;
   align-items: center;
 }
-
 footer .laEmpresa a {
   text-align: center;
 }
-
-/* Footer contacto */
 footer .contacto {
   grid-area: contacto;
   display: flex;
@@ -310,8 +304,16 @@ footer .contacto {
   justify-content: flex-start;
   align-items: center;
 }
-
-/* Footer redes sociales */
+footer .contacto p {
+  /* Footer horario de contacto */
+  margin: 0px;
+  text-align: center;
+}
+footer .contacto h3 {
+  /* Footer horario de contacto */
+  margin: 0px;
+  text-align: center;
+}
 footer .redesSociales {
   grid-area: redesSociales;
   display: flex;
@@ -319,40 +321,26 @@ footer .redesSociales {
   justify-content: flex-start;
   align-items: center;
 }
-
 footer .redesSociales div {
   display: flex;
   justify-content: space-between;
 }
-
-/* Footer imagen */
 footer .imagenfooter {
   grid-area: imagenFooter;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 footer .imagenfooter a img {
   height: 70px;
 }
-
-/* Flecha ir arriba */
+footer .imagenfooter p {
+  /* Footer parrafo */
+  padding: 1.5rem;
+}
 footer .flechaIrArriba a img {
   height: 60px;
 }
-
-/* Footer parrafo */
-footer .imagenfooter p {
-  padding: 1.5rem;
-}
-
-/* Footer horario de contacto */
-footer .contacto p, footer .contacto h3 {
-  margin: 0px;
-  text-align: center;
-}
-
 footer div h3 {
   text-align: center;
 }
@@ -363,7 +351,6 @@ form {
   background-color: #363020;
   padding: 1rem;
 }
-
 form input {
   margin: 0.5rem;
 }
@@ -380,8 +367,8 @@ form input {
   align-items: center;
   flex-direction: row;
   gap: 20px;
+  text-align: justify;
 }
-
 .contenedorNosotros img {
   height: 250px;
   width: 350px;
@@ -400,13 +387,8 @@ form input {
 .empresa {
   margin-top: 0.2rem;
 }
-
 .empresa h2 {
   margin: 0;
-}
-
-.contenedorNosotros {
-  text-align: justify;
 }
 
 @media screen and (max-width: 770px) {

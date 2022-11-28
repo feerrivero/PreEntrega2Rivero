@@ -209,6 +209,22 @@ body main section{
         .barra{
             display: flex;
             flex-direction: column;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        div{
+            .iniciarSesion,
+            .carrito{
+                height: 45px;
+                width: 45px;
+                align-content: center;
+            }
         }
     }
 
@@ -216,12 +232,6 @@ body main section{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    header .barra ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     header, .barra, .botones_header{
         height: 280px;
         flex-direction: column;
@@ -232,20 +242,16 @@ body main section{
         flex-direction: row;
         justify-content: end;
         align-items: center;
+
+        a{
+            img{
+                height: 5.5rem;
+            }
+        }
     }
 
-    header div .iniciarSesion,
-    header div .carrito {
-        height: 45px;
-        width: 45px;
-        align-content: center;
-    }
     .botones_header{
         align-items: flex-start;
-    }
-
-    #logo_header a img{
-        height: 5.5rem;
     }
 }
 
@@ -269,23 +275,26 @@ body main section{
         "cards cards"
         "menuFiltro menuFiltro";
     }
+
     .menuFiltro {
         grid-area: menuFiltro;
-        /* margin: 4rem 1rem; */
         margin: auto;
         font-size: 2rem;
         width: 650px;
         align-items: center;
-    }
-    .menuFiltro div .tipoDePrenda{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-    }
-    .menuFiltro div .tipoDePrenda li{
-        padding: 2rem;
-        margin: auto;
+        div{
+            .tipoDePrenda{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                li{
+                    padding: 2rem;
+                    margin: auto;
+                }
+            }
+        }
     }
 }
 
@@ -299,10 +308,14 @@ body main section{
     }
     .menuFiltro {
         display: none;
+
+        div{
+            .tipoDePrenda{
+                display: none;
+            }
+        }
     }
-    .menuFiltro div .tipoDePrenda{
-        display: none;
-    }
+
 .redesSociales div{
     display: flex;
     flex-direction: column;
@@ -332,85 +345,96 @@ footer{
     "imagenFooter imagenFooter imagenFooter"
     ;
     justify-items: center;
-    background-color: #C7C7A6
+    background-color: #C7C7A6;
+
+    .laEmpresa{
+        grid-area: laEmpresa;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        a{
+            text-align: center;
+        }
+    }
+
+    .contacto{
+        grid-area: contacto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        p{
+            /* Footer horario de contacto */
+            margin: 0px;
+            text-align: center;
+        }
+
+        h3{
+            /* Footer horario de contacto */
+            margin: 0px;
+            text-align: center;
+        }
+    }
+
+    .redesSociales{
+        grid-area: redesSociales;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .imagenfooter{
+        grid-area: imagenFooter;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a{
+            img{
+                height: 70px;
+            }
+        }
+
+        p{
+            /* Footer parrafo */
+            padding: 1.5rem;
+        }
+    }
+
+    .flechaIrArriba{
+        a{
+            img{
+                height: 60px;
+            }
+        }
+    }
+
+    div{
+        h3{
+            text-align: center;
+        }
+    }
 }
 
-/* Footer la empresa */
-footer .laEmpresa{
-    grid-area: laEmpresa;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-footer .laEmpresa a{
-    text-align: center;
-}
-
-/* Footer contacto */
-footer .contacto{
-    grid-area: contacto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-/* Footer redes sociales */
-footer .redesSociales{
-    grid-area: redesSociales;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-footer .redesSociales div{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Footer imagen */
-footer .imagenfooter{
-    grid-area: imagenFooter;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer .imagenfooter a img{
-    height: 70px;
-}
-
-/* Flecha ir arriba */
-footer .flechaIrArriba a img{
-    height: 60px;
-}
-
-/* Footer parrafo */
-footer .imagenfooter p{
-    padding: 1.5rem;
-}
-
-/* Footer horario de contacto */
-footer .contacto p, footer .contacto h3{
-    margin: 0px;
-    text-align: center;
-}
-footer div h3{
-    text-align: center;
-}
 
 /* Formulario */
 form{
     font-style: italic;
     background-color: #363020;
     padding: 1rem;
-}
 
-form input{
-    margin: 0.5rem;
+    input{
+        margin: 0.5rem;
+    }
 }
 
 /* Pestaña nosotros */
@@ -425,13 +449,15 @@ form input{
     align-items: center;
     flex-direction: row;
     gap: 20px;
-}
-.contenedorNosotros img{
-    height: 250px;
-    width: 350px;
-}
-/* carousel */
+    text-align:justify;
 
+    img{
+        height: 250px;
+        width: 350px;
+    }
+}
+
+/* carousel */
 #carouselExampleIndicators{
     width: 100%;
     margin: 0 auto;
@@ -443,14 +469,10 @@ form input{
 
 .empresa{
     margin-top: 0.2rem;
-}
 
-.empresa h2{
-margin: 0;
-}
-
-.contenedorNosotros{
-    text-align:justify;
+    h2{
+        margin: 0;
+    }
 }
 
 @media screen and (max-width:770px){
