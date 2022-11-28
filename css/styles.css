@@ -22,11 +22,41 @@ header {
   grid-template-areas: "logo barra botones";
   height: 7rem;
 }
-
-/*iconos header*/
-header div .iniciarSesion {
+header div .iniciarSesion,
+header div .carrito {
   height: 30px;
   width: 30px;
+}
+header .barra {
+  grid-area: barra;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, white, #A49966);
+}
+header .barra .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header .barra .menu li {
+  list-style: none;
+  font-size: 2rem;
+  padding: 0.3rem;
+}
+header .barra .menu li a {
+  color: #25291C;
+}
+header .barra .menu li a:hover {
+  background-color: rgb(208, 2, 27);
+  color: white;
+}
+header .botones_header {
+  grid-area: botones;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #A49966;
 }
 
 /*logo header*/
@@ -36,60 +66,16 @@ header div .iniciarSesion {
   align-items: center;
   background-color: white;
 }
-
 #logo_header a {
   display: flex;
   justify-content: end;
   align-items: center;
 }
-
 #logo_header a img {
   height: 7rem;
 }
 
-header .barra {
-  grid-area: barra;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to right, white, #A49966);
-}
-
-header .botones_header {
-  grid-area: botones;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #A49966;
-}
-
-header div .carrito {
-  height: 30px;
-  width: 30px;
-}
-
-header .barra .menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-header .barra .menu li {
-  list-style: none;
-  font-size: 2rem;
-  padding: 0.3rem;
-}
-
-header .barra .menu li a {
-  color: #25291C;
-}
-
-header .barra .menu li a:hover {
-  background-color: rgb(208, 2, 27);
-  color: white;
-}
-
-.productos, .envios, .envios, .productosAll {
+.productos, .envios, .productosAll {
   border-top: 0.2rem solid black;
   padding: 1rem;
 }
@@ -109,21 +95,17 @@ body main section {
   background-color: #A49966;
   margin: 0.7rem;
 }
-
 .productos .cards div a {
   color: white;
   background-color: #25291C;
   padding: 5px;
 }
-
 .productos .cards div a:hover {
   background-color: rgb(208, 2, 27);
 }
-
 .productos .cards div h2 {
   font-size: 1.2rem;
 }
-
 .productos .cards div h3 {
   font-size: 1.5rem;
 }
@@ -158,15 +140,6 @@ body main section {
   }
 }
 /* Menu filtro */
-.menuFiltro div ul li {
-  list-style: none;
-}
-
-.menuFiltro div .categorias ul li a {
-  color: white;
-  font-size: 1rem;
-}
-
 .menuFiltro {
   border: 2px solid black;
   height: 7.5rem;
@@ -176,6 +149,13 @@ body main section {
   margin: 4rem 1rem;
   font-size: 1.5rem;
   font-style: italic;
+}
+.menuFiltro div ul li {
+  list-style: none;
+}
+.menuFiltro div .categorias ul li a {
+  color: white;
+  font-size: 1rem;
 }
 
 /* Cards de productos en ofertas del index*/
@@ -187,7 +167,6 @@ body main section {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
-
 .cards div img {
   height: 295px;
   width: 295px;
@@ -196,6 +175,16 @@ body main section {
 
 /* Media queris para pantallas menores de 1275px */
 @media screen and (max-width: 1275px) {
+  header {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 280px;
+    grid-template-areas: "logo barra botones";
+  }
+  header .barra {
+    display: flex;
+    flex-direction: column;
+  }
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -208,16 +197,6 @@ body main section {
   header, .barra, .botones_header {
     height: 280px;
     flex-direction: column;
-  }
-  header .barra {
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 280px;
-    grid-template-areas: "logo barra botones";
   }
   #logo_header {
     display: flex;

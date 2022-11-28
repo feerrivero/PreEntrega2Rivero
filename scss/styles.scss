@@ -1,3 +1,10 @@
+@import "variables.scss";
+@import "globales.scss";
+@import "inicio.scss";
+@import "nosotros.scss";
+@import "productos.scss";
+@import "envios.scss";
+@import "contacto.scss";
 
 /*general*/
 html {
@@ -21,12 +28,51 @@ header {
     grid-template-rows: 115px;
     grid-template-areas: "logo barra botones";
     height: 7rem;
-}
 
-/*iconos header*/
-header div .iniciarSesion {
-    height: 30px;
-    width: 30px;
+    div{
+        .iniciarSesion, 
+        .carrito{
+            height: 30px;
+            width: 30px;  
+        }
+    }
+
+    .barra{
+        grid-area: barra;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, white, #A49966);
+
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            li{
+                list-style: none;
+                font-size: 2rem;
+                padding: 0.3rem;
+
+                a{
+                    color: #25291C;
+                }
+
+                a:hover{
+                    background-color:rgb(208,2,27);
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .botones_header{
+        grid-area: botones;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #A49966;
+    }
 }
 
 /*logo header*/
@@ -35,61 +81,19 @@ header div .iniciarSesion {
     justify-content: center;
     align-items: center;
     background-color: white;
+
+    a{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        img{
+            height: 7rem;  
+        }
+    }
 }
 
-#logo_header a{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
-#logo_header a img{
-    height: 7rem;
-}
-
-header .barra{
-    grid-area: barra;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to right, white, #A49966);
-}
-
-header .botones_header{
-    grid-area: botones;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #A49966;
-}
-
-header div .carrito {
-    height: 30px;
-    width: 30px;  
-}
-
-header .barra .menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-header .barra .menu li{ 
-    list-style: none;
-    font-size: 2rem;
-    padding: 0.3rem;
-}
-
-header .barra .menu li a{
-    color: #25291C;
-}
-
-header .barra .menu li a:hover{
-    background-color:rgb(208,2,27);
-    color: white;
-}
-
-.productos,.envios,.envios,.productosAll{
+.productos,.envios,.productosAll{
     border-top: 0.2rem solid black;
     padding: 1rem
 }
@@ -108,24 +112,24 @@ body main section{
     padding-bottom: 5px;
     background-color: #A49966;
     margin: 0.7rem;
-}
 
-.productos .cards div a{
-    color: white;
-    background-color: #25291C;
-    padding: 5px;
-}
+    a{
+        color: white;
+        background-color: #25291C;
+        padding: 5px;    
+    }
 
-.productos .cards div a:hover{
-background-color: rgb(208,2,27);
-}
+    a:hover{
+        background-color: rgb(208,2,27);
+    }
 
-.productos .cards div h2{
-    font-size: 1.2rem;
-}
+    h2{
+        font-size: 1.2rem;
+    }
 
-.productos .cards div h3{
-    font-size: 1.5rem;
+    h3{
+        font-size: 1.5rem;
+    }
 }
 
 .productos .parrafoProductos{
@@ -154,15 +158,6 @@ background-color: rgb(208,2,27);
 
 /* Menu filtro */
 
-.menuFiltro div ul li{
-    list-style: none;
-}
-
-.menuFiltro div .categorias ul li a{
-    color: white;
-    font-size: 1rem;
-}
-
 .menuFiltro {
     border: 2px solid black;
     height: 7.5rem;
@@ -172,6 +167,17 @@ background-color: rgb(208,2,27);
     margin: 4rem 1rem;
     font-size: 1.5rem;
     font-style: italic;
+
+    div{
+        ul li{
+            list-style: none;
+        }
+
+        .categorias ul li a{
+            color: white;
+            font-size: 1rem;
+        }
+    }
 }
 
 /* Cards de productos en ofertas del index*/
@@ -182,16 +188,30 @@ background-color: rgb(208,2,27);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-}
 
-.cards div img{
-    height: 295px;
-    width: 295px;
-    align-content: center;
+    div{
+        img{
+            height: 295px;
+            width: 295px;
+            align-content: center;  
+        }
+    }
 }
 
 /* Media queris para pantallas menores de 1275px */
 @media screen and (max-width:1275px) {
+    header{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 280px;
+        grid-template-areas: "logo barra botones";
+
+        .barra{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     .cards{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -205,17 +225,6 @@ background-color: rgb(208,2,27);
     header, .barra, .botones_header{
         height: 280px;
         flex-direction: column;
-    }
-
-    header .barra{
-        display: flex;
-        flex-direction: column;
-    }
-    header{
-        display: grid;
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: 280px;
-        grid-template-areas: "logo barra botones";
     }
 
     #logo_header{
