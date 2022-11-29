@@ -405,7 +405,6 @@ form input {
   grid-template-columns: 20% 80%;
   grid-template-areas: "parrafoProductos parrafoProductos" "menuFiltro cards";
 }
-
 .productosAll .parrafoProductos {
   background-color: #363020;
   color: white;
@@ -413,11 +412,9 @@ form input {
   grid-area: parrafoProductos;
   text-align: center;
 }
-
 .productosAll .parrafoProductos h1 {
   font-size: 2rem;
 }
-
 .productosAll .cards div {
   width: 300px;
   height: 380px;
@@ -427,17 +424,14 @@ form input {
   background-color: #A49966;
   margin: 1rem;
 }
-
 .productosAll .cards div a {
   color: white;
   background-color: #25291C;
   padding: 5px;
 }
-
 .productosAll .cards div a:hover {
   background-color: rgb(208, 2, 27);
 }
-
 .productosAll .cards div h2 {
   font-size: 1.2rem;
 }
@@ -446,16 +440,16 @@ form input {
 .envios div h1 {
   background-color: #363020;
   color: white;
-}
-
-.envios div h1,
-h2 {
   font-style: italic;
   text-align: center;
 }
-
 .envios h2 {
   color: #363020;
+}
+
+h2 {
+  font-style: italic;
+  text-align: center;
 }
 
 /* Pestaña contacto, formulario */
