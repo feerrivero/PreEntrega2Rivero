@@ -24,8 +24,8 @@ header {
 }
 header div .iniciarSesion,
 header div .carrito {
-  height: 30px;
   width: 30px;
+  height: 30px;
 }
 header .barra {
   grid-area: barra;
@@ -78,6 +78,74 @@ header .botones_header {
 .productos, .envios, .productosAll {
   border-top: 0.2rem solid black;
   padding: 1rem;
+}
+
+/* Footer */
+footer {
+  border-top: 0.2rem solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "laEmpresa contacto redesSociales" "imagenFooter imagenFooter imagenFooter";
+  justify-items: center;
+  background-color: #C7C7A6;
+}
+footer .laEmpresa {
+  grid-area: laEmpresa;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .laEmpresa a {
+  text-align: center;
+}
+footer .contacto {
+  grid-area: contacto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .contacto p {
+  /* Footer horario de contacto */
+  margin: 0px;
+  text-align: center;
+}
+footer .contacto h3 {
+  /* Footer horario de contacto */
+  margin: 0px;
+  text-align: center;
+}
+footer .redesSociales {
+  grid-area: redesSociales;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .redesSociales div {
+  display: flex;
+  justify-content: space-between;
+}
+footer .imagenfooter {
+  grid-area: imagenFooter;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .imagenfooter a img {
+  height: 70px;
+}
+footer .imagenfooter p {
+  /* Footer parrafo */
+  padding: 1.5rem;
+}
+footer .flechaIrArriba a img {
+  height: 60px;
+}
+footer div h3 {
+  text-align: center;
 }
 
 /* Index */
@@ -277,84 +345,6 @@ body main section {
     flex-direction: row;
   }
 }
-/* Footer */
-footer {
-  border-top: 0.2rem solid black;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "laEmpresa contacto redesSociales" "imagenFooter imagenFooter imagenFooter";
-  justify-items: center;
-  background-color: #C7C7A6;
-}
-footer .laEmpresa {
-  grid-area: laEmpresa;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-footer .laEmpresa a {
-  text-align: center;
-}
-footer .contacto {
-  grid-area: contacto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-footer .contacto p {
-  /* Footer horario de contacto */
-  margin: 0px;
-  text-align: center;
-}
-footer .contacto h3 {
-  /* Footer horario de contacto */
-  margin: 0px;
-  text-align: center;
-}
-footer .redesSociales {
-  grid-area: redesSociales;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-footer .redesSociales div {
-  display: flex;
-  justify-content: space-between;
-}
-footer .imagenfooter {
-  grid-area: imagenFooter;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-footer .imagenfooter a img {
-  height: 70px;
-}
-footer .imagenfooter p {
-  /* Footer parrafo */
-  padding: 1.5rem;
-}
-footer .flechaIrArriba a img {
-  height: 60px;
-}
-footer div h3 {
-  text-align: center;
-}
-
-/* Formulario */
-form {
-  font-style: italic;
-  background-color: #363020;
-  padding: 1rem;
-}
-form input {
-  margin: 0.5rem;
-}
-
 /* Pestaña nosotros */
 .empresa h2 {
   background-color: #363020;
@@ -461,6 +451,16 @@ main form fieldset {
   color: #363020;
   font-style: italic;
   text-align: center;
+}
+
+/* Formulario */
+form {
+  font-style: italic;
+  background-color: #363020;
+  padding: 1rem;
+}
+form input {
+  margin: 0.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

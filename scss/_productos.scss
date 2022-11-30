@@ -1,0 +1,47 @@
+/* Pestaña .productos seccion*/
+.productosAll{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "parrafoProductos parrafoProductos"
+    "menuFiltro cards";
+
+    .parrafoProductos{
+        background-color: #363020;
+        color: white;
+        border: 0.3rem solid black;
+        grid-area: parrafoProductos;
+        text-align: center;
+
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    .cards{
+
+        div{
+            width: 300px;
+            height: 380px;
+            border: 2px solid black;
+            text-align: center;
+            padding-bottom: 5px;
+            background-color: #A49966;
+            margin: 1rem;
+
+            a{
+                color: white;
+                background-color: $color-links;
+                padding: 5px;
+
+                &:hover{
+                    background-color: $color-hover;
+                }
+            }
+
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

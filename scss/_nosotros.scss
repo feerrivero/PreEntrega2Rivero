@@ -1,0 +1,46 @@
+/* Pestaña nosotros */
+.empresa h2{
+    background-color: #363020;
+    color: white;
+    border: 0.3rem solid black;
+}
+
+.contenedorNosotros{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    text-align:justify;
+
+    img{
+        height: 250px;
+        width: 350px;
+    }
+}
+
+/* carousel */
+#carouselExampleIndicators{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#reverse{
+    flex-direction: row-reverse;
+}
+
+.empresa{
+    margin-top: 0.2rem;
+
+    h2{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:770px){
+    .contenedorNosotros, #reverse{
+        flex-direction: column;
+    }
+    .contenedorNosotros img{
+        width: 100%;
+    }
+}

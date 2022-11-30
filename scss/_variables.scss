@@ -1,3 +1,11 @@
 // color links
 $color-links: #25291C;
+
+// color hover
 $color-hover: rgb(208,2,27);
+
+// mixin tamaño iconos
+@mixin dimencionesIconos ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
