@@ -5,13 +5,7 @@ body main section{
 
 /* Productos ofertas */
 .productos .cards div{
-    width: 300px;
-    height: 400px;
-    border: 2px solid black;
-    text-align: center;
-    padding-bottom: 5px;
-    background-color: #A49966;
-    margin: 0.7rem;
+    @include propiedadesCards;
 
     a{
         color: white;

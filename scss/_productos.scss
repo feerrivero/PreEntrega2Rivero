@@ -21,13 +21,7 @@
     .cards{
 
         div{
-            width: 300px;
-            height: 380px;
-            border: 2px solid black;
-            text-align: center;
-            padding-bottom: 5px;
-            background-color: #A49966;
-            margin: 1rem;
+            @include propiedadesCards;
 
             a{
                 color: white;

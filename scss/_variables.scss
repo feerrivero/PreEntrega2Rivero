@@ -9,3 +9,14 @@ $color-hover: rgb(208,2,27);
     width: $ancho;
     height: $alto;
 }
+
+// mixin propiedades cards
+@mixin propiedadesCards{
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 5px;
+    background-color: #A49966;
+    margin: 0.7rem;
+}
