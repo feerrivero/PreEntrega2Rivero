@@ -4,30 +4,9 @@ body main section{
 }
 
 /* Productos ofertas */
-.productos .cards div{
-    @include propiedadesCards;
-
-    a{
-        color: white;
-        background-color: $color-links;
-        padding: 5px;
-        
-        &:hover{
-            background-color: $color-hover;
-        }
-    }
-
-    h2{
-        font-size: 1.2rem;
-    }
-
-    h3{
-        font-size: 1.5rem;
-    }
-}
 
 .productos .parrafoProductos{
-    background-color: rgb(208,2,27);
+    background-color: $color-hover;
     color: white;
     border: 0.3rem solid black;
     grid-area: parrafoProductos;
@@ -50,29 +29,6 @@ body main section{
     background-color:rgb(208,2,27);}
 }
 
-/* Menu filtro */
-
-.menuFiltro {
-    border: 2px solid black;
-    height: 7.5rem;
-    width: 220px; 
-    background-color: #A49966;
-    grid-area: menuFiltro;
-    margin: 4rem 1rem;
-    font-size: 1.5rem;
-    font-style: italic;
-
-    div{
-        ul li{
-            list-style: none;
-        }
-
-        .categorias ul li a{
-            color: white;
-            font-size: 1rem;
-        }
-    }
-}
 
 /* Cards de productos en ofertas del index*/
 .cards{
@@ -151,7 +107,8 @@ body main section{
 
 
 /* Grid cuerpo index */
-.productos{
+.productos,
+.productosAll{
     display:grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: 

@@ -80,6 +80,54 @@ header .botones_header {
   padding: 1rem;
 }
 
+.productos .cards div,
+.productosAll .cards div {
+  width: 300px;
+  height: 400px;
+  border: 2px solid black;
+  text-align: center;
+  padding-bottom: 5px;
+  background-color: #A49966;
+  margin: 0.7rem;
+}
+.productos .cards div a,
+.productosAll .cards div a {
+  color: white;
+  background-color: #25291C;
+  padding: 5px;
+}
+.productos .cards div a:hover,
+.productosAll .cards div a:hover {
+  background-color: rgb(208, 2, 27);
+}
+.productos .cards div h2,
+.productosAll .cards div h2 {
+  font-size: 1.2rem;
+}
+.productos .cards div h3,
+.productosAll .cards div h3 {
+  font-size: 1.5rem;
+}
+
+/* Menu filtro */
+.menuFiltro {
+  border: 2px solid black;
+  height: 7.5rem;
+  width: 220px;
+  background-color: #A49966;
+  grid-area: menuFiltro;
+  margin: 4rem 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.menuFiltro div ul li {
+  list-style: none;
+}
+.menuFiltro div .categorias ul li a {
+  color: white;
+  font-size: 1rem;
+}
+
 /* Footer */
 footer {
   border-top: 0.2rem solid black;
@@ -154,30 +202,6 @@ body main section {
 }
 
 /* Productos ofertas */
-.productos .cards div {
-  width: 300px;
-  height: 400px;
-  border: 2px solid black;
-  text-align: center;
-  padding-bottom: 5px;
-  background-color: #A49966;
-  margin: 0.7rem;
-}
-.productos .cards div a {
-  color: white;
-  background-color: #25291C;
-  padding: 5px;
-}
-.productos .cards div a:hover {
-  background-color: rgb(208, 2, 27);
-}
-.productos .cards div h2 {
-  font-size: 1.2rem;
-}
-.productos .cards div h3 {
-  font-size: 1.5rem;
-}
-
 .productos .parrafoProductos {
   background-color: rgb(208, 2, 27);
   color: white;
@@ -207,25 +231,6 @@ body main section {
     background-color: rgb(208, 2, 27);
   }
 }
-/* Menu filtro */
-.menuFiltro {
-  border: 2px solid black;
-  height: 7.5rem;
-  width: 220px;
-  background-color: #A49966;
-  grid-area: menuFiltro;
-  margin: 4rem 1rem;
-  font-size: 1.5rem;
-  font-style: italic;
-}
-.menuFiltro div ul li {
-  list-style: none;
-}
-.menuFiltro div .categorias ul li a {
-  color: white;
-  font-size: 1rem;
-}
-
 /* Cards de productos en ofertas del index*/
 .cards {
   width: 100%;
@@ -286,7 +291,8 @@ body main section {
   }
 }
 /* Grid cuerpo index */
-.productos {
+.productos,
+.productosAll {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-areas: "parrafoProductos parrafoProductos" "menuFiltro cards";
@@ -390,11 +396,6 @@ body main section {
   }
 }
 /* Pestaña .productos seccion*/
-.productosAll {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: "parrafoProductos parrafoProductos" "menuFiltro cards";
-}
 .productosAll .parrafoProductos {
   background-color: #363020;
   color: white;
