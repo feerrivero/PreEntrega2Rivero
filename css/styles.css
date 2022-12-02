@@ -21,6 +21,7 @@ header {
   grid-template-rows: 115px;
   grid-template-areas: "logo barra botones";
   height: 7rem;
+  /*propiedades barra header*/
 }
 header div .iniciarSesion,
 header div .carrito {
@@ -30,8 +31,8 @@ header div .carrito {
 header .barra {
   grid-area: barra;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-image: linear-gradient(to right, white, #A49966);
 }
 header .barra .menu {
@@ -54,8 +55,8 @@ header .barra .menu li a:hover {
 header .botones_header {
   grid-area: botones;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   background-color: #A49966;
 }
 
@@ -68,8 +69,8 @@ header .botones_header {
 }
 #logo_header a {
   display: flex;
-  justify-content: end;
   align-items: center;
+  justify-content: end;
 }
 #logo_header a img {
   height: 7rem;
@@ -80,6 +81,7 @@ header .botones_header {
   padding: 1rem;
 }
 
+/*propiedades cards*/
 .productos .cards div,
 .productosAll .cards div {
   width: 300px;
@@ -109,7 +111,7 @@ header .botones_header {
   font-size: 1.5rem;
 }
 
-/* Menu filtro */
+/* Menu filtro productos*/
 .menuFiltro {
   border: 2px solid black;
   height: 7.5rem;
@@ -128,7 +130,7 @@ header .botones_header {
   font-size: 1rem;
 }
 
-/* Footer */
+/* Footer*/
 footer {
   border-top: 0.2rem solid black;
   display: grid;
@@ -139,6 +141,7 @@ footer {
   background-color: #C7C7A6;
 }
 footer .laEmpresa {
+  /*footer la empresa*/
   grid-area: laEmpresa;
   display: flex;
   flex-direction: column;
@@ -149,11 +152,12 @@ footer .laEmpresa a {
   text-align: center;
 }
 footer .contacto {
+  /*footer contacto*/
   grid-area: contacto;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
 footer .contacto p {
   /* Footer horario de contacto */
@@ -166,21 +170,23 @@ footer .contacto h3 {
   text-align: center;
 }
 footer .redesSociales {
+  /*seccion redes sociales footer*/
   grid-area: redesSociales;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
 footer .redesSociales div {
   display: flex;
   justify-content: space-between;
 }
 footer .imagenfooter {
+  /*logo footer*/
   grid-area: imagenFooter;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 footer .imagenfooter a img {
   height: 70px;
@@ -194,6 +200,10 @@ footer .flechaIrArriba a img {
 }
 footer div h3 {
   text-align: center;
+}
+
+.colorMarronContenedores, form, .envios div h1 {
+  background-color: #363020;
 }
 
 /* Index */
@@ -246,50 +256,6 @@ body main section {
   align-content: center;
 }
 
-/* Media queris para pantallas menores de 1275px */
-@media screen and (max-width: 1275px) {
-  header {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 280px;
-    grid-template-areas: "logo barra botones";
-  }
-  header .barra {
-    display: flex;
-    flex-direction: column;
-  }
-  header .barra ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  header div .iniciarSesion,
-  header div .carrito {
-    height: 45px;
-    width: 45px;
-    align-content: center;
-  }
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  header, .barra, .botones_header {
-    height: 280px;
-    flex-direction: column;
-  }
-  #logo_header {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-  }
-  #logo_header a img {
-    height: 5.5rem;
-  }
-  .botones_header {
-    align-items: flex-start;
-  }
-}
 /* Grid cuerpo index */
 .productos,
 .productosAll {
@@ -298,60 +264,7 @@ body main section {
   grid-template-areas: "parrafoProductos parrafoProductos" "menuFiltro cards";
 }
 
-/* Media queris para pantallas menores a 1160px */
-@media screen and (max-width: 1160px) {
-  .productos, .productosAll {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "parrafoProductos parrafoProductos" "cards cards" "menuFiltro menuFiltro";
-  }
-  .menuFiltro {
-    grid-area: menuFiltro;
-    margin: auto;
-    font-size: 2rem;
-    width: 650px;
-    align-items: center;
-  }
-  .menuFiltro div .tipoDePrenda {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .menuFiltro div .tipoDePrenda li {
-    padding: 2rem;
-    margin: auto;
-  }
-}
-/* Media queris para pantallas menoras a 685px */
-@media screen and (max-width: 685px) {
-  .productos, .cards {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-  }
-  .menuFiltro {
-    display: none;
-  }
-  .menuFiltro div .tipoDePrenda {
-    display: none;
-  }
-  .redesSociales div {
-    display: flex;
-    flex-direction: column;
-  }
-  header .barra .menu li {
-    font-size: 1.5rem;
-    padding: 0.2rem;
-  }
-}
-@media screen and (max-width: 530px) {
-  footer div {
-    display: flex;
-    flex-direction: row;
-  }
-}
-/* Pestaña nosotros */
+/* separadores */
 .empresa h2 {
   background-color: #363020;
   color: white;
@@ -366,8 +279,8 @@ body main section {
   text-align: justify;
 }
 .contenedorNosotros img {
-  height: 250px;
   width: 350px;
+  height: 250px;
 }
 
 /* carousel */
@@ -387,14 +300,6 @@ body main section {
   margin: 0;
 }
 
-@media screen and (max-width: 770px) {
-  .contenedorNosotros, #reverse {
-    flex-direction: column;
-  }
-  .contenedorNosotros img {
-    width: 100%;
-  }
-}
 /* Pestaña .productos seccion*/
 .productosAll .parrafoProductos {
   background-color: #363020;
@@ -429,7 +334,6 @@ body main section {
 
 /* Pestaña envios */
 .envios div h1 {
-  background-color: #363020;
   color: white;
   font-style: italic;
   text-align: center;
@@ -457,11 +361,117 @@ main form fieldset {
 /* Formulario */
 form {
   font-style: italic;
-  background-color: #363020;
   padding: 1rem;
 }
 form input {
   margin: 0.5rem;
+}
+
+/* Media queris para pantallas menores de 1275px */
+@media screen and (max-width: 1275px) {
+  header {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 280px;
+    grid-template-areas: "logo barra botones";
+  }
+  header .barra {
+    display: flex;
+    flex-direction: column;
+  }
+  header .barra ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header div .iniciarSesion,
+  header div .carrito {
+    width: 45px;
+    height: 45px;
+    align-content: center;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header, .barra, .botones_header {
+    height: 280px;
+    flex-direction: column;
+  }
+  #logo_header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+  }
+  #logo_header a img {
+    height: 5.5rem;
+  }
+  .botones_header {
+    align-items: flex-start;
+  }
+}
+/* Media queris para pantallas menores a 1160px */
+@media screen and (max-width: 1160px) {
+  .productos, .productosAll {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "parrafoProductos parrafoProductos" "cards cards" "menuFiltro menuFiltro";
+  }
+  .menuFiltro {
+    grid-area: menuFiltro;
+    margin: auto;
+    font-size: 2rem;
+    width: 650px;
+    align-items: center;
+  }
+  .menuFiltro div .tipoDePrenda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menuFiltro div .tipoDePrenda li {
+    padding: 2rem;
+    margin: auto;
+  }
+}
+/* Media queris para pantallas menores a 770px */
+@media screen and (max-width: 770px) {
+  .contenedorNosotros, #reverse {
+    flex-direction: column;
+  }
+  .contenedorNosotros img {
+    width: 100%;
+  }
+}
+/* Media queris para pantallas menores a 685px */
+@media screen and (max-width: 685px) {
+  .productos, .cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+  }
+  .menuFiltro {
+    display: none;
+  }
+  .menuFiltro div .tipoDePrenda {
+    display: none;
+  }
+  .redesSociales div {
+    display: flex;
+    flex-direction: column;
+  }
+  header .barra .menu li {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  footer div {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

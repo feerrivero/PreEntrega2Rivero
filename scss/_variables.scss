@@ -24,6 +24,11 @@ $color-hover: rgb(208,2,27);
 // mixin flex-row-center
 @mixin flex-fila-centrado {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
+
+// color contenedor
+$color-contenedor: #A49966;
+
+//color contenedores separadores
+$color-separadores: #363020;

@@ -28,10 +28,13 @@ header {
         }
     }
 
+/*propiedades barra header*/
+
     .barra{
         grid-area: barra;
         @include flex-fila-centrado;
-        background-image: linear-gradient(to right, white, #A49966);
+        justify-content: center;
+        background-image: linear-gradient(to right, white, $color-contenedor);
 
         .menu{
             display: flex;
@@ -57,10 +60,9 @@ header {
 
     .botones_header{
         grid-area: botones;
-        display: flex;
+        @include flex-fila-centrado;
         justify-content: space-evenly;
-        align-items: center;
-        background-color: #A49966;
+        background-color: $color-contenedor;
     }
 }
 
@@ -72,9 +74,8 @@ header {
     background-color: white;
 
     a{
-        display: flex;
+        @include flex-fila-centrado;
         justify-content: end;
-        align-items: center;
 
         img{
             height: 7rem;  
@@ -87,6 +88,7 @@ header {
     padding: 1rem
 }
 
+/*propiedades cards*/
 .productos .cards div,
 .productosAll .cards div{
     @include propiedadesCards;
@@ -110,13 +112,13 @@ header {
     }
 }
 
-/* Menu filtro */
+/* Menu filtro productos*/
 
 .menuFiltro {
     border: 2px solid black;
     height: 7.5rem;
     width: 220px; 
-    background-color: #A49966;
+    background-color: $color-contenedor;
     grid-area: menuFiltro;
     margin: 4rem 1rem;
     font-size: 1.5rem;
@@ -134,7 +136,7 @@ header {
     }
 }
 
-/* Footer */
+/* Footer*/
 footer{
     border-top: 0.2rem solid black;
     display:grid;
@@ -148,6 +150,7 @@ footer{
     background-color: #C7C7A6;
 
     .laEmpresa{
+        /*footer la empresa*/
         grid-area: laEmpresa;
         display: flex;
         flex-direction: column;
@@ -160,11 +163,11 @@ footer{
     }
 
     .contacto{
+        /*footer contacto*/
         grid-area: contacto;
-        display: flex;
+        @include flex-fila-centrado;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
 
         p{
             /* Footer horario de contacto */
@@ -179,12 +182,13 @@ footer{
         }
     }
 
+
     .redesSociales{
+        /*seccion redes sociales footer*/
         grid-area: redesSociales;
-        display: flex;
+        @include flex-fila-centrado;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
 
         div{
             display: flex;
@@ -193,10 +197,10 @@ footer{
     }
 
     .imagenfooter{
+        /*logo footer*/
         grid-area: imagenFooter;
-        display: flex;
+        @include flex-fila-centrado;
         justify-content: space-around;
-        align-items: center;
 
         a{
             img{
@@ -225,4 +229,6 @@ footer{
     }
 }
 
-
+.colorMarronContenedores{
+    background-color: #363020;
+}
