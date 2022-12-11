@@ -15,6 +15,11 @@
 
     h2{
         color:$color-separadores;
+        background-color: $color-footer;
+    }
+
+    form fieldset #codigoPostalButton{
+        width: 150px;
     }
 }
 

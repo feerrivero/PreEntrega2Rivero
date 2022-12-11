@@ -340,6 +340,10 @@ body main section {
 }
 .envios h2 {
   color: #363020;
+  background-color: #C7C7A6;
+}
+.envios form fieldset #codigoPostalButton {
+  width: 150px;
 }
 
 h2 {
@@ -356,6 +360,7 @@ main form fieldset {
   color: #363020;
   font-style: italic;
   text-align: center;
+  background-color: #C7C7A6;
 }
 
 /* Formulario */
@@ -365,6 +370,18 @@ form {
 }
 form input {
   margin: 0.5rem;
+}
+form fieldset legend,
+form fieldset p,
+form fieldset label {
+  color: white;
+}
+form fieldset label .form-control {
+  width: 25px;
+  background-color: white;
+}
+form fieldset label .form-control:checked {
+  background-color: #25291C;
 }
 
 /* Media queris para pantallas menores de 1275px */
@@ -468,9 +485,14 @@ form input {
   }
 }
 @media screen and (max-width: 530px) {
-  footer div {
+  footer {
+    display: grid;
+    grid-template-rows: 200px 370px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer .imagenfooter {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 

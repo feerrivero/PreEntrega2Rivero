@@ -124,8 +124,14 @@ header .barra .menu li{
 }
 
 @media screen and (max-width:530px){
-    footer div{
-        display: flex;
-        flex-direction: row;
+    footer{
+        display: grid;
+        grid-template-rows: 200px 370px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .imagenfooter{
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
