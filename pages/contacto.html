@@ -48,15 +48,21 @@
                     <legend>Información personal</legend>
                     
                     <p>Sexo</p>
+                    
+                    <div id="seleccionSexo">
+                        <label for="hombre">
+                            <input type="radio" id="hombre" name="sexo" class="form-control">Hombre
+                        </label>
+        
+                        <label for="mujer">
+                            <input type="radio" id="mujer" name="sexo" class="form-control">Mujer
+                        </label>
     
-                    <label for="hombre">
-                        <input type="radio" id="hombre" name="sexo" class="form-control">Hombre
-                    </label>
-    
-                    <label for="mujer">
-                        <input type="radio" id="mujer" name="sexo" class="form-control">Mujer
-                    </label>
-    
+                        <label for="indefinido">
+                            <input type="radio" id="indefinido" name="sexo" class="form-control">Prefiero no responder
+                        </label>
+                    </div>
+
                     <div>
                     <label for="nombre">Nombre y apellido</label>
                     <input type="text" required placeholder="Tu nombre y apellido" id="nombre" class="form-control">
@@ -71,8 +77,10 @@
                         <label for="email">E-mail</label>
                         <input type="email" required placeholder="tumail@tiendafer.com" id="email" class="form-control">
                     </div>
-    
-                    <button type="submit">Enviar</button>
+                    
+                    <div id="botonFormulario">
+                        <button type="submit" >Enviar</button>
+                    </div>
     
                 </fieldset>
             </form>

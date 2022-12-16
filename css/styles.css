@@ -345,6 +345,17 @@ body main section {
 .envios form fieldset #codigoPostalButton {
   width: 150px;
 }
+.envios form fieldset #botonFormulario {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.envios form fieldset #botonFormulario button {
+  width: 25%;
+}
+.envios form fieldset #botonFormulario button:hover {
+  background-color: rgb(208, 2, 27);
+}
 
 h2 {
   font-style: italic;
@@ -375,13 +386,36 @@ form fieldset legend,
 form fieldset p,
 form fieldset label {
   color: white;
+  text-align: center;
+}
+form fieldset label {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+form fieldset #seleccionSexo {
+  display: flex;
+  justify-items: center;
 }
 form fieldset label .form-control {
   width: 25px;
+  height: 25px;
   background-color: white;
 }
 form fieldset label .form-control:checked {
-  background-color: #25291C;
+  background-color: rgb(208, 2, 27);
+}
+form fieldset #botonFormulario {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+form fieldset #botonFormulario button {
+  width: 25%;
+}
+form fieldset #botonFormulario button:hover {
+  background-color: rgb(208, 2, 27);
 }
 
 /* Media queris para pantallas menores de 1275px */

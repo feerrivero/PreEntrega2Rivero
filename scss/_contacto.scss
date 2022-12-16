@@ -25,14 +25,43 @@ form{
         p,
         label{
             color:white;
+            text-align: center;
+        }
+
+        label{
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        #seleccionSexo{
+            display:flex;
+            justify-items: center;
         }
 
         label .form-control{
             width: 25px;
+            height: 25px;
             background-color: white;
 
             &:checked{
-                background-color: #25291C;
+                background-color: $color-hover;
+            }
+        }
+        
+        #botonFormulario{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+
+            button{
+                width: 25%;
+
+                &:hover{
+                    background-color: $color-hover;
+                }
             }
         }
     }
